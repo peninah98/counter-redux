@@ -4,7 +4,9 @@ import { decrement, increment, reset } from "../features/counter";
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const value = useSelector((state:{counter:{value:number}}) => state.counter.value);
+  const value = useSelector(
+    (state: { counter: { value: number } }) => state.counter.value
+  );
   return (
     <div className="flex mx-auto flex-col py-10 gap-6">
       <Header />
